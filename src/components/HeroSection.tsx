@@ -61,7 +61,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight mb-4"
+          className="font-heading text-5xl lg:text-7xl font-bold tracking-tight leading-tight mb-4 sm:text-5xl"
         >
           Ibukunoluwanimi Olateju
         </motion.h1>
