@@ -72,7 +72,7 @@ const HeroSection = () => {
           transition={{ delay: 0.6 }}
           className="text-xl sm:text-2xl text-muted-foreground mb-8 h-10"
         >
-          I'm a{" "}
+          <span>I'm a </span>
           <span className="text-primary font-mono">
             {phrases[phraseIndex].slice(0, charIndex)}
           </span>
