@@ -63,7 +63,7 @@ const HeroSection = () => {
           transition={{ delay: 0.4 }}
           className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight mb-4"
         >
-          Alex Morgan
+          Ibukunoluwanimi Olateju
         </motion.h1>
 
         <motion.div
