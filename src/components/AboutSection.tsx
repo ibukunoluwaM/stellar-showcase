@@ -19,19 +19,11 @@ const AboutSection = () => {
 
           <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-start">
             <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                I'm a frontend-focused developer with 5+ years of experience building polished,
-                performant web applications. I care deeply about design systems, accessibility,
-                and creating interfaces that feel effortless to use.
+              <p className="my-[60px]">
+                Frontend developer since 2022, passionate about building beautiful, functional and user-friendly web experiences. I write clean code, obsess over responsive design, and make sure every site looks good and works seamlessly. When I'm not coding, I'm reading, writing, or watching football;  YNWA!
               </p>
-              <p>
-                When I'm not shipping code, I'm probably exploring new creative coding
-                techniques, contributing to open source, or writing about modern web development.
-              </p>
-              <p>
-                Currently, I'm focused on building scalable design systems and exploring the
-                intersection of motion design and engineering.
-              </p>
+              <p>​</p>
+              <p>​</p>
             </div>
 
             <div className="space-y-4">
@@ -42,12 +34,12 @@ const AboutSection = () => {
               </div>
               <div className="rounded-xl border border-border bg-card p-5">
                 <p className="font-mono text-xs text-muted-foreground mb-3">Location</p>
-                <p className="text-sm text-foreground">San Francisco, CA</p>
+                <p className="text-sm text-foreground">​Ogun State, Nigeria</p>
               </div>
               <div className="rounded-xl border border-border bg-card p-5">
                 <p className="font-mono text-xs text-muted-foreground mb-3">Education</p>
-                <p className="text-sm text-foreground">B.S. Computer Science</p>
-                <p className="text-sm text-muted-foreground">Stanford University</p>
+                <p className="text-sm text-foreground">AltSchool Africa</p>
+                <p className="text-sm text-muted-foreground">Front-End Engineering</p>
               </div>
             </div>
           </div>
