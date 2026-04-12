@@ -4,19 +4,19 @@ import { useRef } from "react";
 const categories = [
   {
     title: "Languages",
-    items: ["TypeScript", "JavaScript", "Python", "Rust", "HTML/CSS"],
+    items: ["HTML", "CSS", "JavaScript", "TypeScript"],
   },
   {
-    title: "Frameworks",
-    items: ["React", "Next.js", "Vue", "Svelte", "Node.js"],
+    title: "Frameworks & Libraries",
+    items: ["React", "Tailwind CSS", "Next.js", "Vue.js"],
   },
   {
-    title: "Tools & Platforms",
-    items: ["Git", "Docker", "AWS", "Figma", "Vercel"],
+    title: "Platforms",
+    items: ["WordPress"],
   },
   {
-    title: "Other",
-    items: ["GraphQL", "REST APIs", "CI/CD", "Testing", "Design Systems"],
+    title: "Tools",
+    items: ["Git & GitHub", "Figma", "VS Code"],
   },
 ];
 
