@@ -26,7 +26,7 @@ const Navbar = () => {
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="font-heading font-bold text-lg text-foreground tracking-tight">
-          <span className="text-primary">&lt;</span>dev<span className="text-primary">/&gt;</span>
+          Ibukunoluwa O.
         </a>
 
         {/* Desktop */}

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 
 const phrases = [
-  "fullstack developer.",
+  "open-source .",
   "UI engineer.",
   "open-source contributor.",
   "creative coder.",
