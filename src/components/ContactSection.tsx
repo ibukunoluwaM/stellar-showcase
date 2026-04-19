@@ -5,7 +5,7 @@ import { Mail, Github, Linkedin } from "lucide-react";
 const socials = [
   { icon: Github, label: "GitHub", href: "https://github.com/ibukunoluwaM" },
   { icon: Linkedin, label: "LinkedIn", href: "https://ng.linkedin.com/in/ibukunoluwa-olateju-9234a0251" },
-  { icon: Mail, label: "Email", href: "mailto:hello@example.com" },
+  { icon: Mail, label: "Email", href: "mailto:ibukunoluwaolateju@gmail.com" },
 ];
 
 const ContactSection = () => {
@@ -28,7 +28,7 @@ const ContactSection = () => {
           </p>
 
           <a
-            href="mailto:hello@example.com"
+            href="mailto:ibukunoluwaolateju@gmail.com"
             className="inline-block px-8 py-3.5 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:glow-strong transition-all duration-300 mb-12"
           >
             Say Hello
