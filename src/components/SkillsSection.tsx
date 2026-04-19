@@ -42,7 +42,8 @@ const SkillsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="rounded-xl border border-border bg-card p-6"
+                whileHover={{ y: -4 }}
+                className="rounded-xl border border-border bg-card p-6 hover:border-primary/40 hover:shadow-[0_15px_40px_-15px_hsl(var(--accent)/0.3)] transition-all duration-300"
               >
                 <h3 className="font-heading font-semibold text-sm text-primary mb-4 tracking-wide uppercase">
                   {cat.title}
@@ -51,7 +52,7 @@ const SkillsSection = () => {
                   {cat.items.map((item) => (
                     <span
                       key={item}
-                      className="px-3 py-1.5 rounded-md bg-secondary text-secondary-foreground text-xs font-mono hover:border-glow hover:bg-primary/10 transition-all duration-200 cursor-default"
+                      className="px-3 py-1.5 rounded-md bg-secondary text-secondary-foreground text-xs font-mono hover:bg-primary/15 hover:text-primary hover:scale-105 transition-all duration-200 cursor-default"
                     >
                       {item}
                     </span>
