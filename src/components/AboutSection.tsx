@@ -20,7 +20,7 @@ const AboutSection = () => {
           <div className="grid md:grid-cols-[3fr_2fr] gap-12 items-start">
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p className="my-[60px]">
-                Frontend developer since 2022, passionate about building beautiful, functional and user-friendly web experiences. I write clean code, obsess over responsive design, and make sure every site looks good and works seamlessly. When I'm not coding, I'm reading, writing, or watching football;  YNWA!
+                A Frontend developer since 2022, passionate about building beautiful, functional and user-friendly web experiences. I write clean code, obsess over responsive design, and make sure every site looks good and works seamlessly. When I'm not coding, I'm reading, writing, or watching football; YNWA!
               </p>
               <p>​</p>
               <p>​</p>
