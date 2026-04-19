@@ -1,11 +1,10 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 const socials = [
-  { icon: Github, label: "GitHub", href: "#" },
-  { icon: Linkedin, label: "LinkedIn", href: "#" },
-  { icon: Twitter, label: "Twitter", href: "#" },
+  { icon: Github, label: "GitHub", href: "https://github.com/ibukunoluwaM" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://ng.linkedin.com/in/ibukunoluwa-olateju-9234a0251" },
   { icon: Mail, label: "Email", href: "mailto:hello@example.com" },
 ];
 
