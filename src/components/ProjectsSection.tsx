@@ -1,31 +1,39 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import convoAiImg from "@/assets/project-convo-ai.png";
+import fintechImg from "@/assets/project-fintech.png";
+import todoImg from "@/assets/project-todo.png";
+import universityImg from "@/assets/project-university.png";
 
 const projects = [
   {
-    title: "Nebula UI",
-    description: "A modern component library with built-in theming, dark mode, and accessibility-first design patterns.",
-    tech: ["React", "TypeScript", "Tailwind"],
-    color: "from-primary/20 to-primary/5",
+    title: "Convo AI",
+    description: "Full-stack chatbot web app with dynamic conversation history and a responsive messaging UI.",
+    tech: ["React", "Node.js", "AI"],
+    image: convoAiImg,
+    link: "https://chatbot-triall.netlify.app/",
   },
   {
-    title: "CodeSync",
-    description: "Real-time collaborative code editor with WebSocket-powered sync and multi-cursor support.",
-    tech: ["Next.js", "Socket.io", "Monaco"],
-    color: "from-[hsl(250,80%,68%)]/20 to-[hsl(250,80%,68%)]/5",
+    title: "Fintech Dashboard",
+    description: "A React.js web app for managing fintech operations, featuring multi-section navigation across Dashboard, Products, Analytics, Loans, and more — built with Vite and React Router.",
+    tech: ["React", "Vite", "React Router"],
+    image: fintechImg,
+    link: "https://lighthousefinances.netlify.app/",
   },
   {
-    title: "DataPulse",
-    description: "Analytics dashboard with interactive charts, custom date ranges, and export functionality.",
-    tech: ["React", "D3.js", "Node.js"],
-    color: "from-[hsl(170,70%,50%)]/20 to-[hsl(170,70%,50%)]/5",
+    title: "Todo App",
+    description: "A React + Tailwind CSS task manager with full CRUD functionality, completion tracking, and localStorage persistence for offline support.",
+    tech: ["React", "Tailwind", "LocalStorage"],
+    image: todoImg,
+    link: "https://incandescent-starburst-3dd135.netlify.app/",
   },
   {
-    title: "Markdraft",
-    description: "Distraction-free markdown writing app with live preview, themes, and local-first storage.",
-    tech: ["Svelte", "IndexedDB", "Rust"],
-    color: "from-[hsl(30,80%,55%)]/20 to-[hsl(30,80%,55%)]/5",
+    title: "University Website",
+    description: "A responsive website delivering an intuitive academic experience for prospective and current students.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    image: universityImg,
+    link: "https://edufordwebsite-ibukunoluwa.netlify.app/",
   },
 ];
 
@@ -47,18 +55,23 @@ const ProjectsSection = () => {
 
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, i) => (
-            <motion.div
+            <motion.a
               key={project.title}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.15 * i }}
-              className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 transition-all duration-300"
+              className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 transition-all duration-300 block"
             >
-              {/* Color bar */}
-              <div className={`h-32 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
-                <span className="font-mono text-xs text-muted-foreground opacity-50 group-hover:opacity-100 transition-opacity">
-                  // preview
-                </span>
+              <div className="h-48 overflow-hidden bg-muted">
+                <img
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
 
               <div className="p-6">
@@ -76,17 +89,10 @@ const ProjectsSection = () => {
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-3 text-muted-foreground">
-                    <a href="#" className="hover:text-primary transition-colors">
-                      <Github size={16} />
-                    </a>
-                    <a href="#" className="hover:text-primary transition-colors">
-                      <ExternalLink size={16} />
-                    </a>
-                  </div>
+                  <ExternalLink size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
