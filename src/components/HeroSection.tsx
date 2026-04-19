@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import Particles from "./Particles";
 
 const phrases = [
   "Frontend Developer.",
@@ -37,14 +38,25 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
       {/* Subtle grid */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage: "linear-gradient(hsl(217 91% 60%) 1px, transparent 1px), linear-gradient(90deg, hsl(217 91% 60%) 1px, transparent 1px)",
+          backgroundImage: "linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
         }}
       />
-      {/* Glow orb */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px]" />
+      {/* Sunset glow orbs */}
+      <motion.div
+        animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/3 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[120px]"
+      />
+      <motion.div
+        animate={{ scale: [1.1, 1, 1.1], opacity: [0.5, 0.9, 0.5] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        className="absolute bottom-1/4 right-1/4 w-[450px] h-[450px] rounded-full bg-accent/10 blur-[120px]"
+      />
+      {/* Floating particles */}
+      <Particles count={35} />
 
       <div className="relative z-10 max-w-3xl text-center">
         <motion.p
@@ -62,7 +74,7 @@ const HeroSection = () => {
           transition={{ delay: 0.4 }}
           className="font-heading text-5xl lg:text-7xl font-bold tracking-tight leading-tight mb-4 sm:text-5xl"
         >
-          Ibukunoluwanimi Olateju
+          <span className="text-gradient">Ibukunoluwanimi Olateju</span>
         </motion.h1>
 
         <motion.div
@@ -84,18 +96,22 @@ const HeroSection = () => {
           transition={{ delay: 0.8 }}
           className="flex gap-4 justify-center"
         >
-          <a
+          <motion.a
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.97 }}
             href="#projects"
-            className="px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:glow-strong transition-all duration-300"
+            className="px-6 py-3 rounded-lg bg-gradient-sunset text-primary-foreground font-medium text-sm shadow-lg hover:glow-strong transition-shadow duration-300"
           >
             View My Work
-          </a>
-          <a
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.97 }}
             href="#contact"
-            className="px-6 py-3 rounded-lg border border-border text-foreground font-medium text-sm hover:border-primary/50 hover:text-primary transition-all duration-300"
+            className="px-6 py-3 rounded-lg border border-border text-foreground font-medium text-sm hover:border-primary/50 hover:text-primary transition-colors duration-300"
           >
             Get In Touch
-          </a>
+          </motion.a>
         </motion.div>
       </div>
 
