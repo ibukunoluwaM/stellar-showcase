@@ -63,7 +63,8 @@ const ProjectsSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.15 * i }}
-              className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 transition-all duration-300 block"
+              whileHover={{ y: -6 }}
+              className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/40 hover:shadow-[0_20px_60px_-20px_hsl(var(--primary)/0.3)] transition-all duration-500 block"
             >
               <div className="h-48 overflow-hidden bg-muted">
                 <img
