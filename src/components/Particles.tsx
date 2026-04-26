@@ -12,11 +12,11 @@ const Particles = ({ count = 30, className = "" }: ParticlesProps) => {
         id: i,
         left: Math.random() * 100,
         top: Math.random() * 100,
-        size: Math.random() * 3 + 1,
-        delay: Math.random() * 8,
-        duration: Math.random() * 8 + 8,
+        size: Math.random() * 4 + 1.5,
+        delay: Math.random() * 6,
+        duration: Math.random() * 6 + 5,
         slow: Math.random() > 0.5,
-        accent: Math.random() > 0.6,
+        accent: Math.random() > 0.5,
       })),
     [count]
   );
