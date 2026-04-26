@@ -28,7 +28,7 @@ const AboutSection = () => {
             <div className="space-y-4">
               <motion.div whileHover={{ y: -3 }} className="rounded-xl border border-border bg-card p-5 hover:border-primary/40 transition-colors duration-300">
                 <p className="font-mono text-xs text-muted-foreground mb-3">Currently</p>
-                <p className="text-sm text-foreground font-medium">Senior Frontend Engineer</p>
+                <p className="text-sm text-foreground font-medium">Freelance Developer</p>
                 <p className="text-sm text-muted-foreground">@ Acme Corp</p>
               </motion.div>
               <motion.div whileHover={{ y: -3 }} className="rounded-xl border border-border bg-card p-5 hover:border-accent/40 transition-colors duration-300">
