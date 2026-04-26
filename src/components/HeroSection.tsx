@@ -154,7 +154,7 @@ const HeroSection = () => {
             whileHover={{ scale: 1.06, y: -3 }}
             whileTap={{ scale: 0.96 }}
             href="#projects"
-            className="px-7 py-3 rounded-lg bg-gradient-sunset text-primary-foreground font-semibold text-sm shadow-lg animate-pulse-glow transition-all duration-300"
+            className="px-7 py-3 rounded-lg bg-gradient-sunset text-primary-foreground font-semibold text-sm shadow-lg hover:shadow-[0_0_40px_hsl(var(--primary)/0.5)] transition-shadow duration-300"
           >
             View My Work
           </motion.a>
